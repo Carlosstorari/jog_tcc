@@ -1,4 +1,37 @@
 
+
+
+////////////////////////TRECHO A SER ACRECENTADO/////////////////
+
+////////////////////fabrica de personagens
+const criarPersonagem = (nome, srcTemp)=>{
+	return{	nome: nome,
+			x: canvas.width,
+			y: 0,
+			vida: false, 
+			velocidade : 5,
+			geraImg(){
+				let img = new Image()
+				img.src = srcTemp
+				return img 
+			}
+		}
+}
+
+const personagensNome = ['Woody', 'Alien', 'Jessie', 'Zurg', 'Stinky']
+
+const src = ['imagens/woody.png',
+			'imagens/alien.png', 
+			'imagens/jessie.png', 
+			'imagens/zurg.png', 
+			'imagens/stinky.png']
+
+/////cria novos personagens apartir da fabrica
+const adicionaNome_src = (nome, i) => criarPersonagem(nome, src[i])
+
+const p = personagensNome.map(adicionaNome_src)
+///////////////////////////////////////////////////////////////////////////////////
+						
 function inicializar(){
 			//	intervalo="";
 
@@ -49,34 +82,49 @@ function inicializar(){
 				//imagens
 				fundojogo = new Image();
 				fundojogo.src='imagens/nuvens.png';
+
 				fundogameOver = new Image();
 				fundogameOver.src='imagens/tv_chuviscada.jpg';
+
 				fundoPause = new Image();
 				fundoPause.src='imagens/fundo3.png';
+
 				fundoEstrelado = new Image();
 				fundoEstrelado.src='imagens/ceu_estrelado1.jpg';
+
 				buzzFeliz = new Image();
 				buzzFeliz.src='imagens/buzz_feliz.png';
+
 				gameOver = new Image();
 				gameOver.src='imagens/game_over_red.png';
+
 				botao = new Image();
 				botao.src='imagens/botao.png';
+
 				botaoPlay = new Image();
 				botaoPlay.src='imagens/jogar_nov.png';
+
 				botaoPause = new Image();
 				botaoPause.src='imagens/botao_pause.png';
+
 				setasMouse = new Image();
 				setasMouse.src='imagens/setas.png';
+
 				buzz = new Image();
 				buzz.src = 'imagens/buzz.png';
+
 				woody = new Image();
 				woody.src='imagens/woody.png';
+
 				alien = new Image();
 				alien.src='imagens/alien.png';
+
 				jessie = new Image();
 				jessie.src='imagens/jessie.png';
+
 				zurg = new Image();
 				zurg.src='imagens/zurg.png';
+
 				stinky = new Image();
 				stinky.src='imagens/stinky.png'
 				
