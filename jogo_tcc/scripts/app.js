@@ -48,12 +48,12 @@ function inicializar(){
 				velocidadeStinky = 5;
 				pontosJogador = 0;
 
-				j=Math.floor(Math.random() * 5);
+				j=Math.floor(Math.random() * 5);//numero aleatorio q escolhe personagem q vai cair
 
 				colisao = false;
 				
 
-				var canvas = document.getElementById("canvas");
+				var canvas = document.getElementById("canvas");//pega o componente canvas
 
 				
 				woodyPosX = canvas.width;
